@@ -1,2 +1,2 @@
 import logo from './images/personalLogo.png';
-export {logo};
+export {logo };

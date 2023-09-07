@@ -6,6 +6,7 @@ import LeftSide from "@/components/LeftSide";
 import RightSide from "@/components/RightSide";
 import { motion } from "framer-motion";
 import Banner from "@/components/Banner";
+import About from "@/components/About";
 
 //export is remove here for a begin. check for better solution.
 const metadata: Metadata = {
@@ -28,7 +29,7 @@ export default function RootLayout({
           rel="stylesheet"
         />
         {/* {icon not working, need to fix later} */}
-        {/* <link rel='icon' href={iconPath}/> */}
+        {/* <link rel='icon' href={logo}/> */}
       </head>
       <body className="font-bodyFont w-full h-screen bg-bodyColor text-textLight overflow-x-hidden overflow-y-scroll">
         <Navbar />
@@ -42,6 +43,7 @@ export default function RootLayout({
           </motion.div>
           <div className="h-[88vh] mx-auto w-full p-4 ">
             <Banner />
+            <About />
           </div>
           <motion.div
             initial={{ opacity: 0 }}
