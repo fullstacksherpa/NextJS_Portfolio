@@ -7,6 +7,8 @@ import RightSide from "@/components/RightSide";
 import { motion } from "framer-motion";
 import Banner from "@/components/Banner";
 import About from "@/components/About";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 //export is remove here for a begin. check for better solution.
 const metadata: Metadata = {
@@ -31,7 +33,7 @@ export default function RootLayout({
         {/* {icon not working, need to fix later} */}
         {/* <link rel='icon' href={logo}/> */}
       </head>
-      <body className="font-bodyFont w-full h-screen bg-bodyColor text-textLight overflow-x-hidden overflow-y-scroll">
+      <body className="font-bodyFont w-full h-screen bg-bodyColor text-textLight overflow-x-hidden overflow-y-scroll scrollbar scrollbar-track-textDark/20 scrollbar-thumb-textDark/60"> {/* the scrollbar is from the tailwind plugin tailwind scrollbar from npm, read documentation to see it's property and classes */}
         <Navbar />
         <div className="items-center w-full h-[88vh] xl:flex gap-20 justify-between">
           <motion.div
@@ -44,6 +46,8 @@ export default function RootLayout({
           <div className="h-[88vh] mx-auto w-full p-4 ">
             <Banner />
             <About />
+            <Contact />
+            <Footer />
           </div>
           <motion.div
             initial={{ opacity: 0 }}
